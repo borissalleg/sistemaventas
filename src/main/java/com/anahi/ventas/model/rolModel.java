@@ -21,7 +21,7 @@ public class rolModel {
     private String nameRol;
 
     @ManyToMany(mappedBy = "roles")
-    private List<rolModel> likes;
+    private List<userModel> rolUsuario;
 
     public rolModel() {
     }
@@ -42,12 +42,13 @@ public class rolModel {
         this.nameRol = nameRol;
     }
 
-    public List<rolModel> getLikes() {
-        return this.likes;
+    public List<userModel> getRolUsuario() {
+        return this.rolUsuario;
     }
 
-    public void setLikes(List<rolModel> likes) {
-        this.likes = likes;
+    public void setRolUsuario(List<userModel> rolUsuario) {
+        this.rolUsuario = rolUsuario;
     }
+
 
 }

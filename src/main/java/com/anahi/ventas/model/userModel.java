@@ -26,8 +26,9 @@ public class userModel {
     private String mailUser;
 
     @ManyToMany
-    @JoinTable(name = "pk_rol", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "rol_id"))
+    @JoinTable(name = "user_rol", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "rol_id"))
     private List<rolModel> roles;
+
 
     public userModel() {
     }
